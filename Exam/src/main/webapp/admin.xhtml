@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:x_rt="http://java.sun.com/jstl/xml_rt"> 
+
+<h:head></h:head>
+<body> 
+
+<!-- 
+	JUSTO AZKEN MOMENTUAN APURTU DUT, TIPIKOA
+
+	<h1> LEKUAK </h1>
+	<h2> LEKU BERRI BAT SARTU </h2>
+		<h:form>
+		IZENA: 
+		<h:inputText value="#{lekuaFormMB.izena}" />
+		DESKRIBAPENA:
+		<h:inputText value="#{lekuaFormMB.deskribapena}" />
+		<h:commandButton actionListener="#{adminAtazakMB.lekuaSartuDB(lekuaFormMB, adminViewMB)}" id="submit" value="SARTU" />
+		</h:form>
+	 --> 
+	<h2> LEKU ZERRENDA </h2>
+	<h:dataTable value="#{adminViewMB.lekuakLortuDB()}" var="lekua">
+	<h:column>
+		<f:facet name="header">TEST</f:facet>
+		#{lekua.izena}
+	</h:column>
+	</h:dataTable>
+	
+	<h1> KATEGORIAK </h1>
+	<h2>KATEGORIA BERRI BAT SARTU</h2>
+	<h:form>
+		IZENA: 
+		<h:inputText value="#{kategoriaFormMB.izena}" />
+		DESKRIBAPENA: 
+		<h:inputText value="#{kategoriaFormMB.deskribapena}" />
+		<h:commandButton actionListener="#{adminAtazakMB.kategoriaSartuDB(kategoriaFormMB, adminViewMB)}" id="submit" value="SARTU" />
+	</h:form>
+	
+</body> 
+</html>
